@@ -1,0 +1,74 @@
+
+<!-- 1.Counter app using simple html and JavaScript
+This code creates a simple counter app using HTML and JavaScript. When the button is clicked, the counter increments by 1.   -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="onButtonPress()" id="btn">Counter 0</button>
+
+    <script>
+        function onButtonPress(){
+            const currentValue = document.getElementById('btn').innerHTML;  // Counter 0
+            const currentCounter = currentValue.split(" ")[1]; // ["Counter", "0"]
+            const newCounter = parseInt(currentCounter) + 1;
+            document.getElementById('btn').innerHTML = "Counter " + newCounter;
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!-- 2.Counter app unsing component and state -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="buttonParent">
+    </div>
+    <script>
+        let state = {
+            count:0,
+            color: "red"
+        }   
+        function onButtonPress(){
+            state.count++;
+            state.color = "lightblue";
+            buttonComponentRender();
+        }
+        function buttonComponentRender(){
+            document.getElementById('buttonParent').innerHTML = "";
+            const component = buttonComponent(state.count, state.color);
+            document.getElementById('buttonParent').appendChild(component);
+        } 
+        function buttonComponent(count, color){
+            const button = document.createElement('button');
+            button.innerHTML = "Counter " + count;
+            button.setAttribute("onclick", `onButtonPress()`);
+            button.setAttribute("style", `background-color: ${color}`);
+            return button;
+        }
+        buttonComponentRender();
+    </script>
+</body>
+</html> -->
+
+
+<!-- NOTE -->
+<!-- Further class code and React concept is available on the replit. link below: https://replit.com/@adityasinhasan1/React-Javascript#src/App.jsx-->

@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"/>
+    <button onclick="addTodo()">Add Todo!</button>
+</body>
+<script>
+    let ctr = 1;
+    function deleteTodo(index){
+        const element = document.getElementById("todo-"+index);
+        element.parentNode.removeChild(element);
+    }
+
+    function addTodo() {
+        const inputEle = document.querySelector("input");
+        const value = inputEle.value;
+        const newDivEle = document.createElement("div");
+        newDivEle.setAttribute("id","todo-"+ ctr);
+        newDivEle.innerHTML = "<div>"+value+"</div><button onClick='deleteTodo("+ ctr +")'>Delete</button>";
+        document.querySelector("body").appendChild(newDivEle);
+        ctr = ctr + 1;
+    }
+</script>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"/>
+    <button onclick="addTodo()">Add Todo!</button>
+</body>
+<script>
+   
+    function addTodo() {
+        const value = document.querySelector("input").value;
+        const spanEle = document.createElement("span");
+        spanEle.innerHTML = value;
+        const buttonEle = document.createElement("button");
+        buttonEle.innerHTML = "delete";
+        const newDivEle = document.createElement("div");
+        newDivEle.appendChild(spanEle);
+        newDivEle.appendChild(buttonEle);
+        document.querySelector("body").appendChild(newDivEle);  
+    }
+
+  
+</script>
+</html>
